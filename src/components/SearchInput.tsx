@@ -5,9 +5,10 @@ import { VscSearch } from "react-icons/vsc";
 export default function SearchInput() {
   const [term, setTerm] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate(`/search?term=${term}`);
+    navigate(`/search?text=${term}`);
   };
 
   return (
